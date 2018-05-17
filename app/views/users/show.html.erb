@@ -16,7 +16,7 @@
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
-      <h3>Shares (<%= @user.microposts.count %>)</h3>
+      <h3>シェアコンテンツ (<%= @user.microposts.count %>)</h3>
       <%= render 'users/search' %>  　<!-- searchパーシャル呼出 -->
       <ol class="microposts">
         <%= render @microposts %>
