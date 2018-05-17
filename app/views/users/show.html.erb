@@ -1,4 +1,6 @@
 <% provide(:title, @user.name) %>
+<% provide(:search_name, 'シェア記事：検索') %>
+<% provide(:path, user_path) %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -14,7 +16,8 @@
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <h3>Shares (<%= @user.microposts.count %>)</h3>
+      <%= render 'users/search' %>  　<!-- searchパーシャル呼出 -->
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
