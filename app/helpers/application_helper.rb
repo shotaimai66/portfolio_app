@@ -1,4 +1,6 @@
 module ApplicationHelper
+  
+  
 
   # ページごとの完全なタイトルを返します。                   # コメント行
   def full_title(page_title = '')                     # メソッド定義とオプション引数
