@@ -6,7 +6,7 @@ class AccountActivationsController < ApplicationController
       user.activate
       log_in user
       message  = "#{user.name}さん！ ようこそProgra:へ！"
-      message += "新機能追加！！：①ユーザー及びコンテンツの検索機能②コンテンツへのリンクの投稿"
+      message += "  新機能追加！！：①ユーザー及びコンテンツの検索機能②コンテンツへのリンクの投稿"
       flash[:success] = message
       redirect_to user
     else

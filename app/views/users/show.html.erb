@@ -19,7 +19,7 @@
       <h3>シェアコンテンツ (<%= @user.microposts.count %>)</h3>
       <%= render 'users/search' %>  　<!-- searchパーシャル呼出 -->
       <ol class="microposts">
-        <%= render @microposts %>
+        <%= raw Rinku.auto_link(h(render @microposts)) %>
       </ol>
       <%= will_paginate @microposts %>
     <% end %>
